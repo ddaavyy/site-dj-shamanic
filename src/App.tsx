@@ -9,7 +9,7 @@ function App() {
         <img
           src="/foto-usuario.jpeg"
           alt="DJ Shamanic"
-          className="w-full neon-border rounded-lg object-cover"
+          className=" max-h-96 md:max-h-[500px] lg:w-full neon-border rounded-lg object-cover object-top"
         />
 
         <div>
@@ -34,10 +34,18 @@ function App() {
         <h2 className="neon-blue text-2xl mb-4">REDES OFICIAIS</h2>
 
         <div className="flex flex-wrap justify-center gap-8 text-xl">
-          <a className="hover:text-[#086a85] transition" target="_blank" href="https://www.instagram.com/_djshamanic_/?utm_source=ig_web_button_share_sheet">
+          <a
+            className="hover:text-[#086a85] transition"
+            target="_blank"
+            href="https://www.instagram.com/_djshamanic_/?utm_source=ig_web_button_share_sheet"
+          >
             Instagram
           </a>
-          <a className="hover:text-[#086a85] transition" target="_blank" href="https://soundcloud.com/amv-discarregado?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing">
+          <a
+            className="hover:text-[#086a85] transition"
+            target="_blank"
+            href="https://soundcloud.com/amv-discarregado?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+          >
             SoundCloud
           </a>
           <a className="hover:text-[#086a85] transition" href="#">
