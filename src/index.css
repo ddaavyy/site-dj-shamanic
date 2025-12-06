@@ -2,11 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, #root {
-  height: 100%;
+body {
+  background: radial-gradient(
+    circle at 50% 20%,
+    #150033 0%,
+    #08001a 40%,
+    #020010 100%
+  );
+  min-height: 100vh;
+  color: #e6e6e6;
+  font-family: "Inter", sans-serif;
 }
 
-body {
-  @apply bg-gray-50 text-gray-900 antialiased;
-  font-family: Inter, ui-sans-serif, system-ui;
+.neon-green {
+  color: #00ff9c;
+  text-shadow: 0 0 6px #00ff9c, 0 0 12px #00ff9c, 0 0 24px #00ff9c;
+}
+
+.neon-blue {
+  color: #00c8ff;
+  text-shadow: 0 0 6px #00c8ff, 0 0 12px #00c8ff, 0 0 24px #00c8ff;
+}
+
+.neon-border {
+  border: 2px solid #00e5ff;
+  box-shadow: 0 0 8px #00e5ff, 0 0 16px #00e5ff, 0 0 32px #00e5ff;
+  border-radius: 10px;
+}
+
+.title-outline {
+  font-size: clamp(2.5rem, 6vw, 5rem);  
+  font-weight: 900;
+  color: transparent; 
+  -webkit-text-stroke: 1px #00ffe3; 
+  position: relative;
+}
+
+.title-outline::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px #00ffe3;
+
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 225, 0.145) 0%,
+    rgba(0, 255, 225, 0.703) 50%,
+    rgba(0, 255, 227, 0) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  mask-image: linear-gradient(#fff 0 0);
+  -webkit-mask-image: linear-gradient(#fff 0 0);
+  mask-size: 200% 100%;
+  -webkit-mask-size: 200% 100%;
 }
